@@ -1,62 +1,89 @@
-function renderCourseInfo() {
-  document.getElementById("course-title").textContent = COURSE_INFO.title;
-  document.getElementById("course-period").textContent = COURSE_INFO.period;
+// 차시 정보: 이 배열만 수정하면 메인 페이지 카드가 자동으로 반영됩니다.
+// link: 교안이 준비되면 실제 강의안 페이지(예: lectures/lecture-01.html)나 PDF/노션 링크로 바꿔주세요.
+const LECTURES = [
+  {
+    no: 1,
+    title: "1차시 제목을 입력하세요",
+    summary: "이 차시에서 다루는 내용을 한두 줄로 요약해서 적어주세요.",
+    link: "lectures/lecture-01.html",
+  },
+  {
+    no: 2,
+    title: "2차시 제목을 입력하세요",
+    summary: "이 차시에서 다루는 내용을 한두 줄로 요약해서 적어주세요.",
+    link: "lectures/lecture-02.html",
+  },
+  {
+    no: 3,
+    title: "3차시 제목을 입력하세요",
+    summary: "이 차시에서 다루는 내용을 한두 줄로 요약해서 적어주세요.",
+    link: "lectures/lecture-03.html",
+  },
+  {
+    no: 4,
+    title: "4차시 제목을 입력하세요",
+    summary: "이 차시에서 다루는 내용을 한두 줄로 요약해서 적어주세요.",
+    link: "lectures/lecture-04.html",
+  },
+  {
+    no: 5,
+    title: "5차시 제목을 입력하세요",
+    summary: "이 차시에서 다루는 내용을 한두 줄로 요약해서 적어주세요.",
+    link: "lectures/lecture-05.html",
+  },
+  {
+    no: 6,
+    title: "6차시 제목을 입력하세요",
+    summary: "이 차시에서 다루는 내용을 한두 줄로 요약해서 적어주세요.",
+    link: "lectures/lecture-06.html",
+  },
+];
 
-  const instructorEl = document.getElementById("course-instructor");
-  instructorEl.textContent = COURSE_INFO.instructor + " ";
-  COURSE_INFO.instructorLinks.forEach((link) => {
-    const a = document.createElement("a");
-    a.href = link.url;
-    a.textContent = link.label;
-    a.target = "_blank";
-    a.rel = "noopener";
-    instructorEl.appendChild(a);
-  });
+// 강의 정보(제목/강사/기간)는 여기서 수정 가능합니다.
+const COURSE_INFO = {
+  title: "강의명을 입력하세요",
+  instructor: "강사명",
+  instructorLinks: [
+    // { label: "포트폴리오", url: "https://example.com" },
+  ],
+  period: "0000.00.00",
+};
 
-}
+const MATERIALS_SECTION = {
+  title: "강의 자료",
+  desc: "강의안과 실습 파일을 내려받으세요.",
+};
 
-function renderMaterials() {
-  document.getElementById("materials-title").textContent = MATERIALS_SECTION.title;
-  document.getElementById("materials-desc").textContent = MATERIALS_SECTION.desc;
-
-  const grid = document.getElementById("materials-grid");
-  MATERIALS.forEach((item) => {
-    const card = document.createElement("div");
-    card.className = "material-card";
-
-    const isPadlet = item.type === "padlet";
-    const label = isPadlet ? "패들렛 열기" : "다운로드";
-    const target = isPadlet ? ' target="_blank" rel="noopener"' : "";
-
-    card.innerHTML = `
-      <div class="material-icon">${item.icon}</div>
-      <div class="material-info">
-        <h3>${item.title}</h3>
-        <p>${item.description}</p>
-      </div>
-      <a class="material-btn" href="${item.url || "#"}"${target}>${label}</a>
-    `;
-    grid.appendChild(card);
-  });
-}
-
-function renderLectureGrid() {
-  const grid = document.getElementById("lecture-grid");
-  LECTURES.forEach((lecture) => {
-    const card = document.createElement("a");
-    card.className = "lecture-card";
-    card.href = lecture.link;
-
-    card.innerHTML = `
-      <span class="no">${lecture.no}차시</span>
-      <h3>${lecture.title}</h3>
-      <p>${lecture.summary}</p>
-      <span class="btn">강의안 보기 →</span>
-    `;
-    grid.appendChild(card);
-  });
-}
-
-renderCourseInfo();
-renderLectureGrid();
-renderMaterials();
+// 자료 카드 목록: 필요한 만큼 항목을 추가/삭제하세요.
+// type: "padlet" → 버튼에 "패들렛 열기"가 표시되고 새 창으로 열립니다. (url에 패들렛 보드 링크를 넣으세요)
+// type: "download" → 버튼에 "다운로드"가 표시됩니다. (url에 파일/노션 링크를 넣으세요)
+const MATERIALS = [
+  {
+    icon: "📄",
+    title: "실습 프롬프트 모음 (패들렛)",
+    description: "실습 프롬프트를 패들렛에서 모아 보고 함께 공유해요",
+    type: "padlet",
+    url: "https://padlet.com/vividhan0900/padlet-48y4o0i5vn9cbp3g",
+  },
+  {
+    icon: "📄",
+    title: "자료 제목을 입력하세요 (PDF)",
+    description: "자료에 대한 설명을 한 줄로 적어주세요",
+    type: "download",
+    url: "#",
+  },
+  {
+    icon: "📄",
+    title: "자료 제목을 입력하세요 (PDF)",
+    description: "자료에 대한 설명을 한 줄로 적어주세요",
+    type: "download",
+    url: "#",
+  },
+  {
+    icon: "📄",
+    title: "자료 제목을 입력하세요 (CSV)",
+    description: "자료에 대한 설명을 한 줄로 적어주세요",
+    type: "download",
+    url: "#",
+  },
+];
