@@ -63,7 +63,7 @@ const MATERIALS = [
     title: "실습 프롬프트 모음 (패들렛)",
     description: "실습 프롬프트를 패들렛에서 모아 보고 함께 공유해요",
     type: "padlet",
-    url: "",
+    url: "https://padlet.com/vividhan0900/padlet-48y4o0i5vn9cbp3g",
   },
   {
     icon: "📄",
