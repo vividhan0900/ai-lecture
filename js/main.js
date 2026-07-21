@@ -1,16 +1,15 @@
 function renderCourseInfo() {
   document.getElementById("course-title").textContent = COURSE_INFO.title;
   document.getElementById("course-period").textContent = COURSE_INFO.period;
+  document.getElementById("course-subtitle").textContent = COURSE_INFO.subtitle;
+  document.getElementById("course-description").textContent = COURSE_INFO.description;
+  document.getElementById("instructor-name").textContent = COURSE_INFO.instructor;
 
-  const instructorEl = document.getElementById("course-instructor");
-  instructorEl.textContent = COURSE_INFO.instructor + " ";
-  COURSE_INFO.instructorLinks.forEach((link) => {
-    const a = document.createElement("a");
-    a.href = link.url;
-    a.textContent = link.label;
-    a.target = "_blank";
-    a.rel = "noopener";
-    instructorEl.appendChild(a);
+  const tagsEl = document.getElementById("instructor-tags");
+  COURSE_INFO.instructorTags.forEach((tag) => {
+    const span = document.createElement("span");
+    span.textContent = tag;
+    tagsEl.appendChild(span);
   });
 }
 
@@ -47,7 +46,7 @@ function renderLectureGrid() {
     card.href = lecture.link;
 
     card.innerHTML = `
-      <span class="no">${lecture.no}차시</span>
+      <span class="no">${lecture.no}</span>
       <h3>${lecture.title}</h3>
       <p>${lecture.summary}</p>
       <span class="btn">강의안 보기 →</span>

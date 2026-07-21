@@ -36,15 +36,16 @@ const LECTURES = [
 // 강의 정보(제목/강사/기간)는 여기서 수정 가능합니다.
 const COURSE_INFO = {
   title: "생성형 AI 활용 실무역량 강화 교육",
-  instructor: "한성은 (한국강사교육협회 이사)",
-  instructorLinks: [
-    // { label: "포트폴리오", url: "https://example.com" },
-  ],
+  subtitle: "파주시청 공무원 대상 · 생성형 AI 실무 활용 교육",
+  description:
+    "ChatGPT, Gemini, Claude를 활용해 정책 조사부터 홍보 콘텐츠 제작, 공문서·민원 응답 자동화까지 — 공무원 실무에 바로 쓰는 생성형 AI 활용법을 배웁니다.",
+  instructor: "한성은",
+  instructorTags: ["한국강사교육협회 이사"],
   period: "2026.07.16",
 };
 
 const MATERIALS_SECTION = {
-  title: "강의 자료",
+  title: "📚 강의 자료",
   desc: "강의안과 실습 파일을 내려받으세요.",
 };
 
@@ -53,16 +54,44 @@ const MATERIALS_SECTION = {
 // type: "download" → 버튼에 "다운로드"가 표시됩니다. (url에 파일/노션 링크를 넣으세요)
 const MATERIALS = [
   {
-    icon: "📄",
+    icon: "📌",
     title: "실습 결과물 업로드 (패들렛)",
     description: "실습 중 만든 포스터·카드뉴스·프롬프트를 패들렛에 올리고 함께 공유해요",
     type: "padlet",
     url: "https://padlet.com/vividhan0900/bit-ly-ai-3-4xbn3a7e2134y94n",
   },
   {
-    icon: "📄",
+    icon: "📊",
     title: "강의 자료 (PPTX)",
     description: "전체 차시 강의안 원본입니다. 업로드 후 이 링크를 교체해주세요",
+    type: "download",
+    url: "#",
+  },
+  {
+    icon: "📎",
+    title: "참고자료 1",
+    description: "실습에 사용할 파일을 올리고 이 링크를 교체해주세요",
+    type: "download",
+    url: "#",
+  },
+  {
+    icon: "📎",
+    title: "참고자료 2",
+    description: "실습에 사용할 파일을 올리고 이 링크를 교체해주세요",
+    type: "download",
+    url: "#",
+  },
+  {
+    icon: "📎",
+    title: "참고자료 3",
+    description: "실습에 사용할 파일을 올리고 이 링크를 교체해주세요",
+    type: "download",
+    url: "#",
+  },
+  {
+    icon: "📎",
+    title: "참고자료 4",
+    description: "실습에 사용할 파일을 올리고 이 링크를 교체해주세요",
     type: "download",
     url: "#",
   },

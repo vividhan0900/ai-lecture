@@ -28,34 +28,82 @@ body {
 }
 
 header.hero {
-  padding: 64px 0 40px;
+  background: linear-gradient(135deg, #16324f 0%, #1f6f78 100%);
+  padding: 56px 0 76px;
   text-align: center;
 }
 
 header.hero .period {
   display: inline-block;
-  font-size: 14px;
-  color: var(--accent);
-  background: var(--accent-soft);
-  padding: 4px 14px;
+  font-size: 13px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px 16px;
   border-radius: 999px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 header.hero h1 {
+  color: #fff;
   font-size: 32px;
+  margin: 0 0 10px;
+}
+
+header.hero .subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  font-weight: 600;
   margin: 0 0 12px;
 }
 
-header.hero .instructor {
-  color: var(--text-muted);
-  font-size: 15px;
+header.hero .description {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
-header.hero .instructor a {
+.instructor-card {
+  max-width: 1032px;
+  margin: -36px auto 0;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 16px 32px rgba(15, 30, 45, 0.14);
+  padding: 20px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.instructor-card .name {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.instructor-card .name .label {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-left: 6px;
+}
+
+.instructor-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.instructor-card .tags span {
+  background: var(--accent-soft);
   color: var(--accent);
-  text-decoration: none;
-  margin: 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
 }
 
 section {
@@ -100,9 +148,16 @@ section > h2 .hint {
 }
 
 .lecture-card .no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
   font-size: 13px;
-  font-weight: 600;
-  color: var(--accent);
+  font-weight: 700;
 }
 
 .lecture-card h3 {
@@ -200,23 +255,49 @@ footer {
   font-size: 13px;
 }
 
+.lecture-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+}
+
+.lecture-nav a {
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-muted);
+  padding: 6px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.lecture-nav a.home {
+  color: var(--accent);
+  margin-right: 4px;
+}
+
+.lecture-nav a.active {
+  background: var(--accent);
+  color: #fff;
+}
+
 .lecture-detail {
   max-width: 720px;
   margin: 0 auto;
-  padding: 56px 24px 80px;
-}
-
-.lecture-detail .back {
-  display: inline-block;
-  margin-bottom: 24px;
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 14px;
+  padding: 40px 24px 80px;
 }
 
 .lecture-detail h1 {
   font-size: 26px;
-  margin-bottom: 8px;
+  margin: 10px 0 6px;
 }
 
 .lecture-detail .no {
@@ -225,8 +306,65 @@ footer {
   font-size: 14px;
 }
 
+.topic-tag {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.instructor-line {
+  margin: 0 0 24px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.goal-box {
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 28px;
+}
+
+.goal-box h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: var(--accent);
+}
+
+.goal-box .content-list {
+  color: var(--text);
+}
+
+.section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.section-nav a {
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 14px;
+}
+
+.section-nav a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .lecture-detail .block {
   margin-top: 32px;
+  scroll-margin-top: 70px;
 }
 
 .lecture-detail .block h2 {
