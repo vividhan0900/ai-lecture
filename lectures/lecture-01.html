@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>1차시 강의안</title>
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<div class="lecture-detail">
+  <a class="back" href="../index.html">← 목록으로</a>
+  <div class="no">1차시</div>
+  <h1>생성형 AI 트렌드와 공공행정의 변화</h1>
+
+  <div class="block">
+    <h2>학습 목표</h2>
+    <ul class="content-list">
+      <li>생성형 AI 3대장(ChatGPT, Gemini, Claude)의 특징과 최신 트렌드를 이해한다</li>
+      <li>범정부 AI 공통기반, hwpx 전환 등 공공행정 분야 AI 정책 변화를 파악한다</li>
+      <li>공공기관 AI 활용 시 유의해야 할 할루시네이션(환각) 사례와 윤리 원칙을 익힌다</li>
+      <li>프롬프트 황금 공식(역할-목적-맥락-지침-형식-검토)을 활용해 업무 프롬프트를 작성할 수 있다</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h2>강의 내용</h2>
+    <ul class="content-list">
+      <li>생성형 AI(LLM)의 3대장: ChatGPT, Gemini, Claude 포지셔닝과 최신 업데이트(GPT-5.6 등)</li>
+      <li>범정부 AI 공통기반 구축과 단계적 확산 계획, 'AI 법령 비서' 시범서비스</li>
+      <li>공공문서 hwp → hwpx 포맷 전환 정책</li>
+      <li>공공기관 할루시네이션(환각) 실제 사례 3가지와 시사점
+        <ul>
+          <li>존재하지 않는 법령 인용 (국민권익위원회 사례)</li>
+          <li>통계 수치 조작 (서울시청 예산시스템)</li>
+          <li>존재하지 않는 성과 기재 (경기도청)</li>
+        </ul>
+      </li>
+      <li>공무원 AI 활용 윤리 원칙: 법령·개인정보 처리, 객관적 표현, AI 결과물 검토 원칙</li>
+      <li>프롬프트 황금 공식 6단계(역할 → 목적 → 맥락 → 지침 → 형식 → 검토) 실습</li>
+    </ul>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 예시 1</span>
+      <p class="prompt-title">완성형 프롬프트 (역할 + 목적 + 맥락 + 지침 + 형식)</p>
+      <pre class="prompt-text">너는 시청 총무팀 주무관이다.
+ 부서장 회의 내용을 바탕으로 다음 주 업무공유용 요약본을 작성해줘.
+ 핵심 결정사항, 부서별 요청사항, 일정 관련 사항을 우선 정리하고,
+ 불확실한 내용은 단정하지 마.
+
+ 형식은 '핵심결정 / 요청사항 / 일정 / 확인필요사항' 4개 항목으로 나눠줘.</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+
+    <div class="prompt-box">
+      <span class="prompt-label">프롬프트 예시 2</span>
+      <p class="prompt-title">검토 지시 추가 (초안 작성 후 이어서 요청)</p>
+      <pre class="prompt-text">위 초안을 작성한 뒤
+모호한 표현 3개를 찾아 수정하고
+누락 가능 항목이 있는지 점검하고
+팀장 보고용 축약본을 작성하고
+확인이 필요한 부분은 따로 표시해줘.</pre>
+      <button class="prompt-copy-btn" onclick="copyPrompt(this)">📋 복사</button>
+    </div>
+  </div>
+
+  <div class="block">
+    <h2>실습</h2>
+    <ul class="content-list">
+      <li>위 "역목맥지" 프롬프트를 우리 부서 실제 업무(회의록 요약 등)에 맞게 바꿔서 직접 작성해보기</li>
+      <li>ChatGPT 개인 맞춤 설정(맞춤형 지침)에 공공기관용 지침 등록하기</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h2>참고 자료</h2>
+    <ul class="content-list">
+      <li><a href="https://artificialanalysis.ai" target="_blank" rel="noopener">artificialanalysis.ai</a> — 여러 AI 모델의 성능과 비용을 비교하는 사이트</li>
+    </ul>
+  </div>
+</div>
+
+<script src="../js/prompt-copy.js"></script>
+</body>
+</html>
