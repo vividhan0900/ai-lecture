@@ -241,3 +241,18 @@ footer {
   border-radius: 10px;
   padding: 16px;
 }
+
+.lecture-detail .block .content-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.lecture-detail .block .content-list li {
+  margin-bottom: 6px;
+}
+
+.lecture-detail .block .content-list li ul {
+  margin-top: 4px;
+}

@@ -3,50 +3,44 @@
 const LECTURES = [
   {
     no: 1,
-    title: "1차시 제목을 입력하세요",
-    summary: "이 차시에서 다루는 내용을 한두 줄로 요약해서 적어주세요.",
+    title: "생성형 AI 트렌드와 공공행정의 변화",
+    summary: "ChatGPT·Gemini·Claude 최신 트렌드와 정부 AI 정책을 살펴보고, 공무원 AI 활용 주의점과 프롬프트 황금공식(역목맥지)을 배웁니다.",
     link: "lectures/lecture-01.html",
   },
   {
     no: 2,
-    title: "2차시 제목을 입력하세요",
-    summary: "이 차시에서 다루는 내용을 한두 줄로 요약해서 적어주세요.",
+    title: "생성형 AI 활용 홍보 콘텐츠 제작 실습",
+    summary: "콘텐츠 구조화 프롬프트로 포스터·인포그래픽·카드뉴스·유튜브 썸네일을 만들고, 미리캔버스로 완성해봅니다.",
     link: "lectures/lecture-02.html",
   },
   {
     no: 3,
-    title: "3차시 제목을 입력하세요",
-    summary: "이 차시에서 다루는 내용을 한두 줄로 요약해서 적어주세요.",
+    title: "AI 활용 공공행정 문서 작성과 자동화",
+    summary: "ChatGPT 웹검색·심층리서치로 정책을 조사하고, 프로젝트 기능으로 공문서·민원답변·이메일 작성을 자동화합니다.",
     link: "lectures/lecture-03.html",
   },
   {
     no: 4,
-    title: "4차시 제목을 입력하세요",
-    summary: "이 차시에서 다루는 내용을 한두 줄로 요약해서 적어주세요.",
+    title: "행정·정책보고서 작성을 위한 딥리서치",
+    summary: "제미나이 Gems로 나만의 AI 업무비서를 설계하고, 캔버스 기능으로 사업기획서·결과보고서·PPT까지 만듭니다.",
     link: "lectures/lecture-04.html",
   },
   {
     no: 5,
-    title: "5차시 제목을 입력하세요",
-    summary: "이 차시에서 다루는 내용을 한두 줄로 요약해서 적어주세요.",
+    title: "클로드(Claude) SKILL로 공공행정문서 생성",
+    summary: "클로드 SKILL 기능으로 우리 기관 공문서 양식에 맞춰 HWPX 문서를 자동 생성하는 방법을 배웁니다.",
     link: "lectures/lecture-05.html",
-  },
-  {
-    no: 6,
-    title: "6차시 제목을 입력하세요",
-    summary: "이 차시에서 다루는 내용을 한두 줄로 요약해서 적어주세요.",
-    link: "lectures/lecture-06.html",
   },
 ];
 
 // 강의 정보(제목/강사/기간)는 여기서 수정 가능합니다.
 const COURSE_INFO = {
-  title: "강의명을 입력하세요",
-  instructor: "강사명",
+  title: "생성형 AI 활용 실무역량 강화 교육",
+  instructor: "한성은 (한국강사교육협회 이사)",
   instructorLinks: [
     // { label: "포트폴리오", url: "https://example.com" },
   ],
-  period: "0000.00.00",
+  period: "2026.07.16",
 };
 
 const MATERIALS_SECTION = {
@@ -60,29 +54,15 @@ const MATERIALS_SECTION = {
 const MATERIALS = [
   {
     icon: "📄",
-    title: "실습 프롬프트 모음 (패들렛)",
-    description: "실습 프롬프트를 패들렛에서 모아 보고 함께 공유해요",
+    title: "실습 결과물 업로드 (패들렛)",
+    description: "실습 중 만든 포스터·카드뉴스·프롬프트를 패들렛에 올리고 함께 공유해요",
     type: "padlet",
-    url: "https://padlet.com/vividhan0900/padlet-48y4o0i5vn9cbp3g",
+    url: "https://padlet.com/vividhan0900/bit-ly-ai-3-4xbn3a7e2134y94n",
   },
   {
     icon: "📄",
-    title: "자료 제목을 입력하세요 (PDF)",
-    description: "자료에 대한 설명을 한 줄로 적어주세요",
-    type: "download",
-    url: "#",
-  },
-  {
-    icon: "📄",
-    title: "자료 제목을 입력하세요 (PDF)",
-    description: "자료에 대한 설명을 한 줄로 적어주세요",
-    type: "download",
-    url: "#",
-  },
-  {
-    icon: "📄",
-    title: "자료 제목을 입력하세요 (CSV)",
-    description: "자료에 대한 설명을 한 줄로 적어주세요",
+    title: "강의 자료 (PPTX)",
+    description: "전체 차시 강의안 원본입니다. 업로드 후 이 링크를 교체해주세요",
     type: "download",
     url: "#",
   },
